@@ -1,0 +1,76 @@
+# Netbeans
+nbproject/
+
+# ISP Manager
+webstat/
+
+# nodeJS
+node_modules/
+
+#package-lock
+package-lock.json
+
+# PHPStorm
+.idea/
+
+# Mercurial
+.hg
+
+# SVN
+.svn
+
+# Linux
+*~
+
+# Mac
+.DS_Store
+
+*.db
+*.cache
+
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+cache/
+assets/
+
+/readme.html
+/license.txt
+
+robots.txt
+
+# known large file types
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi

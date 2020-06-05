@@ -1,0 +1,228 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  padding-top: 10px;
+
+  * {
+    color: $white;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .logo {
+      flex-basis: 20%;
+      padding-top: 20px;
+
+      @include breakpoint(sm) {
+        padding-top: 0;
+        margin-top: 15px;
+        flex-basis: 35%;
+      }
+    }
+
+  }
+
+  .header-right-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    align-items: flex-end;
+
+    .header-contacts {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-end;
+
+      a {
+        display: inline-block;
+        margin-right: 60px;
+        font-weight: 800;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @include breakpoint(lg) {
+        flex-basis: 100%;
+        align-items: center;
+        padding-right: 50px;
+
+        a {
+          margin-right: 20px;
+        }
+      }
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    .main-nav {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      ul {
+        display: flex;
+
+        li {
+          margin-right: 33px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            font-weight: 800;
+            color: rgba($white, 0.85);
+            position: relative;
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              height: 4px;
+              width: 0;
+              background: $blue;
+              bottom: -21px;
+              left: 0;
+              z-index: 1;
+              transition: width 0.3s;
+              //opacity: 0;
+            }
+
+            &:hover {
+              color: rgba($white, 1);
+
+              &:after {
+                width: 100%;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 5000px;
+        right: 0;
+        transform: translateX(30%);
+        height: 4px;
+        background: rgba($white, 0.3);
+      }
+
+      @include breakpoint(lg) {
+        position: absolute;
+        left: 0;
+        background: $white;
+        z-index: 99;
+        height: 100vh;
+        width: 100vw;
+        padding: 50px;
+        top: -105vh;
+        transition: all 0.5s ease;
+
+        &.mobile-show {
+          top: -10px;
+        }
+
+        ul {
+          flex-direction: column;
+          li {
+            margin-bottom: 20px;
+            a {
+              color: $black;
+              font-weight: 800;
+              text-transform: uppercase;
+              font-size: 20px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .burger-btn {
+    display: none;
+    position: absolute;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    z-index: 999;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+
+    .line {
+      width: 26px;
+      height: 3px;
+      background-color: $white;
+      display: block;
+      margin: 4px auto;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      opacity: 1;
+      -webkit-border-radius: 1.5px;
+      border-radius: 1.5px;
+    }
+
+    &.active {
+      .line {
+        &:first-child {
+          transform: translateY(6px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &.fixed {
+    background: rgba($blue, 0.9);
+    position: fixed;
+    padding-right: 15px;
+  }
+  @include breakpoint(lg) {
+    &.fixed {
+      padding-top: 0;
+      background: $blue;
+      height: 80px;
+      padding-right: 0;
+
+      .mobile-show {
+        top: 0!important;
+      }
+    }
+
+    &.mobile-menu-enable {
+      .burger-btn {
+        .line {
+          background: $gray-dark;
+        }
+      }
+    }
+  }
+  @include breakpoint(md) {
+    &.fixed {
+      height: 60px;
+    }
+  }
+}

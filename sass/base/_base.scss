@@ -1,0 +1,202 @@
+body {
+    background: $base-background;
+    color: $base-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    overflow-x: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+html {
+    background-color: $base-background;
+}
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    margin-bottom: 20px;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: 0.3s background-color, 0.3s color;
+    &:hover {
+        color: darken($link-color, 10%);
+        text-decoration: none;
+    }
+}
+
+p a {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin: 0 0 20px;
+    position: relative;
+    a {
+        color: $heading-color;
+        &:hover {
+            color: $link-color;
+            text-decoration: none;
+        }
+    }
+}
+
+h1 {
+    font-size: 48px;
+    @include breakpoint(lg) {
+        font-size: 40px;
+    }
+    @include breakpoint(md) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+    @include breakpoint(md) {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    min-width: $min-width;
+    max-width: $max-width;
+    padding: 0 25px;
+    margin: 0 auto;
+    position: relative;
+    @include breakpoint(md) {
+        padding: 0 15px;
+    }
+}
+
+main {
+    padding-bottom: 0;
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
+    .home & {
+        padding: 0;
+    }
+}
+
+.section {
+    clear: both;
+    padding: 60px 0;
+    @include breakpoint(lg) {
+        padding: 40px 0;
+    }
+}
+
+.heading {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 800;
+}
+
+.btn-common {
+    padding: 10px 30px;
+    background: $blue;
+    color: $white;
+    font-weight: 600;
+    transition: 0.3s background-color, 0.3s color, 0.3s border-color;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-size: 18px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+
+    &:hover {
+        background: $white;
+        color: $blue;
+
+        &.hover-border-blue {
+            border-color: $blue;
+        }
+    }
+
+    &.btn-transparent {
+        background: transparent;
+        border-color: $white;
+    }
+
+    &.hover-blue {
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,1213 @@
+.intro-section {
+  height: 100vh;
+  padding: 0;
+  position: relative;
+  max-height: 1020px;
+
+  @include breakpoint(xxl) {
+    max-height: 880px;
+    height: auto;
+  }
+
+  @include breakpoint(md) {
+    height: auto;
+    background: url("/images/content/intro-img-1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 1;
+
+    .intro-form {
+      background: $base-background;
+      padding: 50px 50px;
+
+      .h6 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 30px;
+      }
+
+      .form-row {
+        margin-bottom: 50px;
+        width: 300px;
+      }
+
+      .btn-common {
+        margin-top: 20px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include breakpoint(md) {
+        padding: 20px;
+
+        .h6 {
+          margin-bottom: 10px;
+        }
+        .form-row {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @include breakpoint(md) {
+      position: static;
+      transform: none;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .intro-slide {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    @include breakpoint(xxl) {
+      height: auto;
+    }
+
+    .slide-bg {
+      width: 100%;
+      height: auto;
+      max-height: 1020px;
+      @include breakpoint(xxl) {
+        max-height: 900px;
+      }
+      @include breakpoint(lg) {
+        min-height: 700px;
+      }
+    }
+
+    .slide-txt {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      left: 15%;
+      z-index: 1;
+      color: $white;
+      padding-top: 80px;
+      max-width: 35%;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 140px;
+        background: $blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .h1 {
+        color: $white;
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .sub-title {
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      @include breakpoint(xxl) {
+        &:before {
+          display: none;
+        }
+
+        .h1 {
+          font-size: 32px;
+          width: auto;
+          margin-bottom: 0;
+        }
+      }
+
+      @include breakpoint(sm) {
+
+      }
+    }
+    @include breakpoint(md) {
+      display: none;
+
+      &:first-child {
+        display: block;
+
+        .slide-bg {
+          display: none;
+        }
+      }
+
+      .slide-txt {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        padding-left: 15px;
+        margin-bottom: 50px;
+
+        .h1 {
+          font-size: 28px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .intro-slider-navigation {
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    background: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 30px 20px 70px;
+
+    @include breakpoint(xxl) {
+      bottom: 7px;
+    }
+
+    @include breakpoint(md) {
+      display: none;
+    }
+
+    .slider-progress {
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+
+      span {
+        padding: 3px;
+      }
+    }
+
+    .arrows {
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      transform: translateY(1px);
+      div {
+        cursor: pointer;
+        opacity: 0.3;
+        transition: 0.3s opacity;
+        padding: 0 15px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.section-products {
+  padding: 60px 0;
+
+  @include breakpoint(md) {
+    padding: 5px 0;
+  }
+
+  .product-wrapper {
+    padding: 1%;
+
+    .product-card {
+      padding: 40px;
+      background-color: $gray-dark;
+      color: $white;
+      font-weight: 600;
+      min-height: 280px;
+
+      .h6 {
+        text-transform: capitalize;
+        font-size: 22px;
+        margin-bottom: 30px;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        min-height: 72px;
+      }
+
+      .btn-common {
+        width: 60%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &:first-child {
+      .product-card {
+        background: $blue;
+      }
+
+      .btn-common {
+        background: $gray-dark;
+        border-color: transparent;
+
+        &:hover {
+          background: $blue;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  &.row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .about-img {
+    left: 0;
+    z-index: 1;
+    max-width: 700px;
+    display: flex;
+  }
+
+  .about-card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include breakpoint(md) {
+    .about-card {
+      padding: 20px;
+
+      .h6 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.about-card {
+  padding: 50px;
+  color: $white;
+  background: $blue;
+  max-width: 500px;
+  z-index: 2;
+
+  &.gray-bg {
+    background-color: $gray-dark;
+  }
+
+  .h6 {
+    text-transform: capitalize;
+    font-size: 36px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.section-title-small {
+  position: relative;
+  .pre-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba($gray-dark, 0.6);
+    font-weight: 800;
+  }
+  .h3 {
+    color: $gray-dark;
+    font-size: 48px;
+    font-weight: 400;
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+    @include breakpoint(md) {
+      font-size: 28px;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    max-width: 250px;
+    background: $gray-dark;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+  }
+
+  &.right {
+    position: absolute;
+    right: 5%;
+  }
+  &.left {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.section-about {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-diagnostic {
+  padding-bottom: 0;
+}
+
+.diagnostics {
+  margin-top: 80px;
+  padding-left: 5%;
+
+  .diagnostics-col {
+    background: $blue;
+    color: $white;
+    padding: 35px;
+    font-weight: 800;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+      flex-basis: 20%;
+    }
+
+    .title {
+      padding: 0 20px;
+      max-width: 300px;
+      flex-basis: 70%;
+      font-size: 18px;
+    }
+    p {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      background: $gray-dark;
+    }
+  }
+
+  @include breakpoint(xxl) {
+    padding: 0 20px;
+
+    .diagnostics-col {
+      padding: 20px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      img {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-top: 0;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.section-directions {
+  padding-bottom: 0;
+  .about-row.first {
+    max-width: 80%;
+    padding: 100px 0;
+    background: $gray-dark;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    .about-card {
+      transform: translateX(-20%);
+      background: $white;
+      color: $black;
+      max-width: 700px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      background: $gray-dark;
+      width: 400px;
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    @include breakpoint(md) {
+      max-width: 100%;
+      .about-card {
+        padding: 20px;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.addition-section {
+  padding-top: 0;
+
+  .section-title-small {
+    padding-top: 60px;
+    margin-left: 60px;
+    position: relative;
+
+    @include breakpoint(xxl) {
+      margin-left: 10px;
+
+      .h3 {
+        font-size: 36px;
+      }
+    }
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+}
+
+.addition-col {
+  background: $blue;
+  padding: 80px;
+  color: $white;
+
+  .h6 {
+    font-size: 44px;
+    line-height: 1.2;
+    color: $white;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+
+  .btn-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 70%;
+    background: $gray-dark;
+
+    &:hover {
+      background: $white;
+      border-color: $blue;
+    }
+  }
+
+  @include breakpoint(xxl) {
+    padding: 30px;
+
+    .h6 {
+      font-size: 32px;
+    }
+  }
+  &.gray {
+    background: $gray-dark;
+
+    .btn-common {
+      background: $blue;
+
+      &:hover {
+        background: $white;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+.section-example {
+  padding-bottom: 0;
+  .row {
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &:last-child {
+      margin-top: 15px;
+      margin-bottom: 50px;
+    }
+  }
+  .example-item {
+    display: block;
+    padding: 10px 30px;
+
+    .num {
+      color: $blue;
+      font-size: 40px;
+      display: inline-block;
+      margin-right: 10px;
+      transform: translateY(-100%);
+    }
+
+    img {
+      @include breakpoint(xl) {
+        max-width: 200px;
+      }
+    }
+
+
+    .h6 {
+      margin-top: 30px;
+      text-transform: uppercase;
+      font-weight: 800;
+      max-width: 200px;
+      line-height: 1.2;
+      font-size: 18px;
+    }
+
+    p {
+      max-width: 320px;
+      font-weight: 600;
+      color: $gray;
+      font-size: 18px;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+
+      p {
+        max-width: unset;
+      }
+    }
+
+  }
+
+  .prices-download {
+    max-width: 250px;
+    background: $blue;
+    padding: 40px;
+    color: $white;
+    margin-top: 40px;
+
+    .h6 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint(md) {
+      max-width: unset;
+
+      .h6 {
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .btn-common {
+      display: flex;
+      width: 100%;
+      background: $gray-dark;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        display: inline-block;
+        margin-left: 15px;
+      }
+
+      &:hover {
+        background: $blue;
+        border-color: $white;
+        color: $white;
+      }
+    }
+  }
+}
+
+.services-section {
+  .gray-bg {
+    padding-left: 10%;
+    display: flex;
+    background: $gray-dark;
+    padding-right: 0;
+
+    @include breakpoint(md) {
+      padding-left: 25px;
+    }
+  }
+
+  .servicese-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 6vw;
+    padding-top: 40px;
+    .h3 {
+      font-weight: 400;
+      font-size: 30px;
+      text-transform: uppercase;
+      color: $white;
+
+      @include breakpoint(sm) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .services-arrows {
+    display: flex;
+
+    .slider-prev,
+    .slider-next {
+      padding: 0 20px;
+      opacity: 0.7;
+      cursor: pointer;
+      transition: 0.3s opacity;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding-top: 0;
+  }
+
+  .services-txt {
+    padding-top: 50px;
+    padding-left: 50px;
+
+    @include breakpoint(xxl) {
+      padding-left: 10px;
+      padding-right: 20px;
+    }
+    .h5 {
+      font-size: 24px;
+      font-weight: 900;
+      color: $black;
+      margin-bottom: 40px;
+
+      @include breakpoint(sm) {
+        font-size: 22px;
+        line-height: 1.2;
+      }
+    }
+
+    ul {
+      li {
+        font-weight: 800;
+        font-size: 18px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        display: flex;
+        align-items: flex-start;
+
+        @include breakpoint(sm) {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          min-height: 10px;
+          min-width: 10px;
+          background-size: contain;
+          background: $blue;
+          margin-right: 20px;
+          transform: translateY(8px);
+        }
+      }
+    }
+  }
+}
+
+.services-slider {
+  position: relative;
+  transform: translateY(80px);
+
+  .services-slide {
+    display: flex!important;
+
+    .services-card {
+      position: relative;
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .tag {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background: $blue;
+        color: $white;
+        font-weight: 800;
+        font-size: 16px;
+        padding: 10px 30px;
+      }
+
+      .btn-common {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+          background: $gray-dark;
+          color: $white;
+        }
+      }
+
+      @include breakpoint(md) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    transform: translateY(20px);
+    .services-slide {
+      .services-card {
+        .tag {
+          font-size: 14px;
+          padding: 5px 20px;
+        }
+        .btn-common {
+          height: 60px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.how-we-work {
+  padding-top: 120px;
+
+  @include breakpoint(xxl) {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.work-row {
+  margin-top: 80px;
+}
+
+.work-item {
+  display: flex;
+  flex-wrap: wrap;
+
+  .heading {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .num {
+    height: 70px;
+    width: 62px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $blue;
+    font-size: 34px;
+    color: $white;
+  }
+
+  p {
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: 20px;
+  }
+}
+
+.section-price {
+  .section-title-small {
+    margin-bottom: 0;
+    &:after {
+      display: none;
+    }
+  }
+
+  .btn-common {
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+
+  .btn-expand-table {
+    background: $gray-dark;
+    margin-left: 15px;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}
+
+.row-tab-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    padding: 8px 20px;
+    display: inline-block;
+    border: 3px solid $gray-dark;
+    font-weight: 600;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: all 0.3s;
+    @include breakpoint(md) {
+      margin-bottom: 10px;
+    }
+
+    &.active {
+      background: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+
+    &:hover {
+      background: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+  }
+}
+
+.tabs-content {
+  .tab {
+    display: none;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.table-buttons {
+  display: flex;
+  a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.tab-table {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  min-width: 500px;
+  .table-row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 10px;
+
+    .table-col {
+      flex-basis: 15%;
+      &:first-child {
+        flex-basis: 55%;
+      }
+    }
+
+    &.row-head {
+      background: $blue;
+      color: $white;
+    }
+  }
+}
+
+.section-partners {
+  padding-left: 9vw;
+  @include breakpoint(xxl) {
+    padding-left: 30px;
+  }
+  @include breakpoint(md) {
+    padding-left: 0px;
+  }
+  @include breakpoint(sm) {
+    padding: 0 10px;
+  }
+  .section-title-small {
+    position: relative;
+    display: inline-block;
+    &:after {
+      display: none;
+    }
+  }
+
+  .partners-slider-progress {
+    color: $white;
+  }
+
+  .partners-slider-navigation {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transform: translate(100%, 30%);
+    background: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 30px 20px 70px;
+
+    @include breakpoint(md) {
+      position: static;
+      transform: translateX(0);
+      padding: 10px 20px;
+    }
+
+    .slider-progress {
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+
+      span {
+        padding: 3px;
+      }
+    }
+
+    .arrows {
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      transform: translateY(1px);
+      div {
+        cursor: pointer;
+        opacity: 0.3;
+        transition: 0.3s opacity;
+        padding: 0 15px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .partner-item {
+    padding: 0 70px;
+    .partner-img {
+      height: 150px;
+      display: flex;
+      align-items: center;
+    }
+    p {
+      margin-top: 50px;
+      font-weight: 600;
+      color: $gray;
+      font-size: 18px;
+    }
+
+    @include breakpoint(md){
+      padding: 0 20px;
+    }
+  }
+}
+
+.sectiom-bottom-form {
+
+  .section-heading {
+    .h5 {
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 850px;
+      font-weight: 600;
+      color: $gray;
+      font-size: 18px;
+    }
+  }
+
+  @include breakpoint(md) {
+    padding-top: 0;
+
+    .section-heading {
+      .h5 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .row {
+    padding: 15px;
+  }
+
+  .h6 {
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    padding-right: 50%;
+
+    @include breakpoint(md) {
+      max-width: unset;
+      padding-right: 10px;
+      font-size: 24px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 155px;
+      background: $blue;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .form-descr {
+    border: 2px solid rgba($gray, 0.6);
+    padding: 40px 20px 40px 40px;
+    transform: translateY(-120px);
+
+    @include breakpoint(lg) {
+      transform: translateY(0);
+      margin-top: 50px;
+    }
+
+    ul {
+      li {
+        font-weight: 800;
+        display: flex;
+        align-items: flex-start;
+        color: #999898;
+        margin-bottom: 40px;
+
+        &:before {
+          content: '';
+          display: block;
+          min-height: 10px;
+          min-width: 10px;
+          background-size: contain;
+          background: #265fb4;
+          margin-right: 20px;
+          transform: translateY(8px);
+        }
+
+        &:first-child {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .form-bottom-badges {
+    border: 2px solid rgba($gray, 0.6);
+    padding: 30px 50px;
+
+    .badge-block {
+      padding-bottom: 40px;
+      border-bottom: 2px solid rgba($gray, 0.6);
+      margin-bottom: 40px;
+
+      .subtitle {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 800;
+        color: #999898;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 800;
+        color: #999898;
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.bottom-form-wrapper {
+  background: $base-background;
+  padding-right: 80px;
+
+  .form-row {
+    margin-bottom: 50px;
+  }
+
+  .btn-common {
+    margin-top: 20px;
+    height: 60px;
+    background: $gray-dark;
+
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+  }
+}
+
