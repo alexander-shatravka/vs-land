@@ -3,7 +3,7 @@
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     // $email = $_POST['email'];
-    $message = $_POST['message'];
+    $service = $_POST['service'];
     // $file = $_POST['file'];
 
     $token = "1245666893:AAG0dKYlA3ekDdCfwt7W4EETe4Kca0Akmzk";

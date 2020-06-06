@@ -159,7 +159,7 @@
         margin-bottom: 50px;
 
         .h1 {
-          font-size: 28px;
+          font-size: 26px;
           line-height: 1.2;
         }
       }
@@ -233,7 +233,6 @@
       min-height: 280px;
 
       .h6 {
-        text-transform: capitalize;
         font-size: 22px;
         margin-bottom: 30px;
         line-height: 1.2;
@@ -251,6 +250,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      @include breakpoint(md) {
+        padding: 25px;
+        min-height: unset;
+
+        .h6 {
+          font-size: 18px;
+        }
       }
     }
 
@@ -323,7 +331,6 @@
   }
 
   .h6 {
-    text-transform: capitalize;
     font-size: 36px;
     margin-bottom: 30px;
     line-height: 1.2;
@@ -437,6 +444,17 @@
       }
     }
   }
+
+  @include breakpoint(md) {
+    .diagnostics-col {
+      padding: 10px 15px;
+      p{
+        padding-top: 5px;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .section-directions {
@@ -506,6 +524,9 @@
   background: $blue;
   padding: 80px;
   color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .h6 {
     font-size: 44px;
@@ -518,6 +539,18 @@
     font-weight: 800;
     line-height: 1.5;
     margin-bottom: 50px;
+  }
+
+  @include breakpoint(md) {
+    .h6 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
   }
 
   .btn-common {
@@ -915,8 +948,14 @@
     margin-right: 15px;
     font-size: 18px;
     transition: all 0.3s;
+    @include breakpoint(lg) {
+      margin-bottom: 10px;
+    }
     @include breakpoint(md) {
       margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 3px 8px;
     }
 
     &.active {
@@ -957,22 +996,34 @@
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 50px;
-  min-width: 500px;
   .table-row {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 10px;
+    padding: 10px 10px;
+    &:nth-child(2n) {
+      background-color: rgba($blue, 0.1);
+    }
 
     .table-col {
       flex-basis: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:first-child {
         flex-basis: 55%;
+        padding-right: 5px;
+        justify-content: flex-start;
       }
     }
 
     &.row-head {
       background: $blue;
       color: $white;
+    }
+
+    @include breakpoint(md) {
+      padding: 5px;
+      font-size: 12px;
     }
   }
 }
@@ -1194,7 +1245,6 @@
 .bottom-form-wrapper {
   background: $base-background;
   padding-right: 80px;
-
   .form-row {
     margin-bottom: 50px;
   }
@@ -1208,6 +1258,12 @@
       background: $blue;
       color: $white;
     }
+  }
+
+  @include breakpoint(md) {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
   }
 }
 

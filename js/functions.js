@@ -29,17 +29,16 @@ function initIntroSlider() {
     prevArrow: $('.intro-slider-prev'),
     nextArrow: $('.intro-slider-next')
   })
-
-  jQuery(window).on('resize load', function() {
-    var viewportWidth = jQuery(window).width();
-
-    if (viewportWidth < 768) {
-      $('.intro-slider').slick('unslick');
-    } else {
-      // Do some thing
-    }
-  });
 }
+jQuery(window).on('load', function() {
+  var viewportWidth = jQuery(window).width();
+
+  if (viewportWidth < 768) {
+    $('.intro-slider').slick('unslick');
+  } else {
+    return false
+  }
+});
 
 function initFixedHeader() {
   var fixedItem = jQuery("header"),
@@ -141,22 +140,23 @@ function initPartnersSlider() {
 }
 
 function initTelegramForms() {
-  jQuery('#main-form-submit').on('click', function(e) {
+  jQuery('.form-submit').on('click', function(e) {
+    var form = $(this).parents('form');
     e.preventDefault();
     initFormValidation();
-    var errors = jQuery('#form-main .has-error');
+    var errors = form.find('.has-error');
     if (errors.length) {
       return false;
     }
-    var form_data = jQuery('#form-main').serialize();
+    var form_data = form.serialize();
     jQuery.ajax({ //telegram to admins
       type: "POST",
       url: "telegram.php",
       data: form_data,
       success: function() {
         // jQuery('.thank-massage').addClass('done');
-        location = '/thank-you.html';
-        setTimeout(function() { jQuery('.thank-massage').removeClass('done'); }, 3000);
+        // location = '/thank-you.html';
+        // setTimeout(function() { jQuery('.thank-massage').removeClass('done'); }, 3000);
       },
     });
     return false;
@@ -164,17 +164,17 @@ function initTelegramForms() {
 }
 
 function initFormValidation() {
-  jQuery('#main-form-submit').on('click', function(e) {
+  jQuery('.form-submit').on('click', function(e) {
     e.preventDefault();
     var name = jQuery(this).parents('form').find('input[name="name"]');
     var tel = jQuery(this).parents('form').find('input[name="phone"]');
     // var email = jQuery(this).parents('form').find('input[name=email]');
 
-    if (name.val()=='') {
+    if (!name.val()) {
       name.addClass('has-error');
     } else name.removeClass('has-error');
 
-    if (tel.val()=='') {
+    if (!tel.val()) {
       tel.addClass('has-error');
     } else tel.removeClass('has-error');
 
@@ -185,7 +185,7 @@ function initFormValidation() {
 }
 
 function initRemoveErr(){
-  jQuery('input[name=name],input[name=email],input[name=phone]').focusout(function(){
+  jQuery('input[name=name],input[name=email],input[name=phone]').on('focusout change', function(){
     var name = jQuery(this).parents('form').find('input[name=name]');
     var tel = jQuery(this).parents('form').find('input[name=phone]');
     // var email = jQuery(this).parents('form').find('input[name=email]');

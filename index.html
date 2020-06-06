@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name=description content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/main.min.css">
@@ -44,8 +44,8 @@
         </div>
     </header>
     <main class="main">
-        <section class="section intro-section">
-            <div class="container" id="main-form">
+        <section class="section intro-section" id="main-form">
+            <div class="container">
                 <div class="intro-form">
                     <form action="#">
                         <h6 class="h6">заполните форму</h6>
@@ -53,7 +53,7 @@
                             <label class="input-wrapper">
     <!--                            <span class="main-label">Имя *</span>-->
                                 <span class="placeholder">Имя *</span>
-                                <input name="intro-name"
+                                <input name="name"
                                        id="intro-name"
                                        type="text"
                                        class="custom-input required"
@@ -64,7 +64,7 @@
                             <label class="input-wrapper">
                                 <!--                            <span class="main-label">Номер телефона *</span>-->
                                 <span class="placeholder">Номер телефона *</span>
-                                <input name="intro-phone"
+                                <input name="phone"
                                        id="intro-phone"
                                        type="text"
                                        class="custom-input required"
@@ -75,14 +75,14 @@
                             <label class="input-wrapper">
     <!--                            <span class="main-label">Проблема *</span>-->
                                 <span class="placeholder">Сообщение *</span>
-                                <input name="intro-service"
+                                <input name="service"
                                        id="intro-service"
                                        type="text"
                                        class="custom-input required"
                                        placeholder="">
                             </label>
                         </div>
-                        <a href="#main-form" class="btn-common hover-light anchor-link hover-border-blue">Заказать звонок</a>
+                        <a href="#" class="form-submit btn-common hover-light hover-border-blue">Заказать звонок</a>
                     </form>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                 <div class="about-row row-reverse">
                     <div class="about-img"><img src="images/about-img-2.jpg" alt=""></div>
                     <div class="about-card gray-bg">
-                        <div class="h6">Качество</div>
+                        <div class="h6">Подтвержденное качество</div>
                         <p>Мы работаем с лучшими в отрасли поставщиками и предлагаем своим клиентам комплектующие от ведущих мировых производителей.</p>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                         <p>Обновленная герметизация позволит увеличить температуру в квартире на 2-4° зимой</p>
                     </div>
                     <div class="diagnostics-col col-lg-3 col-md-6">
-                        <img src="images/icon-worker.svg" alt="">
+                        <img src="images/icon-economy.svg" alt="">
                         <span class="title">Экономия энергии</span>
                         <p>За счет меньших потерь тепла, вы платите меньше за коммунальные услуги</p>
                     </div>
@@ -237,28 +237,22 @@
                 <div class="about-row first">
                     <div class="about-img"><img src="images/directions-img-3.jpg" alt=""></div>
                     <div class="about-card">
-                        <div class="h6">Ремонт и профилактика</div>
-                        <p>окно плохо закрывается или «заедает»<br>
-                            фурнитура пришла в негодность<br>
-                            перекос рамы<br>
-                            конструкция плохо отрегулирована<br>
-                            образуется конденсат<br>
-                            провисание створок<br>
-                            повреждения стеклопакета</p>
+                        <div class="h6">VIP - <b>монтаж</b></div>
+                        <p>Система VIP-монтажа, применяемая специалистами компании «Викносистем» , стала  оптимальным решением для монтажа светопрозрачных конструкций и возведения объектов, где применяются деформационные швы. </p>
                     </div>
                 </div>
                 <div class="about-row row-reverse">
                     <div class="about-img"><img src="images/directions-img-1.jpg" alt=""></div>
                     <div class="about-card gray-bg">
-                        <div class="h6">Процесс работы</div>
-                        <p>В процессе реботы </p>
+                        <div class="h6">Регулировка фурнитуры</div>
+                        <p>Одна из самых распространенных проблем — заклинивание фурнитуры. Эта неисправность является следствием превышения усилий при закрытии окна или износа фурнитуры. </p>
                     </div>
                 </div>
                 <div class="about-row">
                     <div class="about-img"><img src="images/directions-img-2.jpg" alt=""></div>
                     <div class="about-card">
-                        <div class="h6">коллекцию размеров и форм</div>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</p>
+                        <div class="h6">Гарантия качества </div>
+                        <p>Мы увереены в предлагаемых материалах и качестве своей работы, поэтому можем предоставить гарантию до 3-х лет.</p>
                     </div>
                 </div>
             </div>
@@ -266,13 +260,21 @@
         <section class="section addition-section">
             <div class="row container">
                 <div class="addition-col col-lg-6 col-xl-4">
-                    <h6 class="h6">Время некий печатник создал большую</h6>
-                    <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</p>
+                    <div>
+                        <h6 class="h6">Жалюзи и шторы</h6>
+                        <p>На Ваши установленные окна специалисты нашей компании смогут Вам предложеить дополнительно вертикальные
+                            и горизонтальные жалюзи, римские шторы, тканевые и защитные роллеты, москитные сетки, врезку вентиляционных
+                            решеток в подоконники, приточные клапаны вентиляции.
+                        </p>
+                    </div>
                     <a href="#main-form" class="btn-common">Заказать</a>
                 </div>
                 <div class="addition-col col-lg-6 col-xl-4 gray">
-                    <h6 class="h6">Время некий печатник создал большую</h6>
-                    <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</p>
+                    <div>
+                        <h6 class="h6">Защитные роллеты</h6>
+                        <p>Для повышения Вашей безопасности и безопасности помещений, мы предлагаем широкий выбор защитных роллетов.
+                        </p>
+                    </div>
                     <a href="#main-form" class="btn-common">Заказать</a>
                 </div>
                 <div class="col-xxl-4 col-lg-6 col-xl-4">
@@ -283,110 +285,110 @@
                 </div>
             </div>
         </section>
-        <section class="section section-example">
-            <div class="container">
-                <div class="section-title-small">
-                    <span class="pre-title">доставка</span>
-                    <h3 class="h3">Направления</h3>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <b class="num">1</b>
-                        <img src="images/example-1.png" alt="">
-                        <h6 class="h6">Безымянный печатник создал </h6>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <b class="num">2</b>
-                        <img src="images/example-2.png" alt="">
-                        <h6 class="h6">Безымянный печатник создал </h6>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <b class="num">3</b>
-                        <img src="images/example-3.png" alt="">
-                        <h6 class="h6">Безымянный печатник создал </h6>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <b class="num">4</b>
-                        <img src="images/example-4.png" alt="">
-                        <h6 class="h6">Безымянный печатник создал </h6>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <b class="num">5</b>
-                        <img src="images/example-5.png" alt="">
-                        <h6 class="h6">Безымянный печатник создал </h6>
-                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">
-                        <div class="prices-download">
-                            <div class="h6">скачайте наш прайс</div>
-                            <p>В то время некий безымянный печатник создал большую.</p>
-                            <a href="/viknosystem-price.pdf" download class="btn-common">Скачать <i><img src="images/icon-download.svg" alt=""></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                </div>
-                </div>
-            </div>
-        </section>
-        <section class="section services-section">
-            <div class="row">
+<!--        <section class="section section-example">-->
+<!--            <div class="container">-->
+<!--                <div class="section-title-small">-->
+<!--                    <span class="pre-title">доставка</span>-->
+<!--                    <h3 class="h3">Направления</h3>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <b class="num">1</b>-->
+<!--                        <img src="images/example-1.png" alt="">-->
+<!--                        <h6 class="h6">Безымянный печатник создал </h6>-->
+<!--                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <b class="num">2</b>-->
+<!--                        <img src="images/example-2.png" alt="">-->
+<!--                        <h6 class="h6">Безымянный печатник создал </h6>-->
+<!--                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <b class="num">3</b>-->
+<!--                        <img src="images/example-3.png" alt="">-->
+<!--                        <h6 class="h6">Безымянный печатник создал </h6>-->
+<!--                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <b class="num">4</b>-->
+<!--                        <img src="images/example-4.png" alt="">-->
+<!--                        <h6 class="h6">Безымянный печатник создал </h6>-->
+<!--                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <b class="num">5</b>-->
+<!--                        <img src="images/example-5.png" alt="">-->
+<!--                        <h6 class="h6">Безымянный печатник создал </h6>-->
+<!--                        <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 example-item">-->
+<!--                        <div class="prices-download">-->
+<!--                            <div class="h6">скачайте наш прайс</div>-->
+<!--                            <p>В то время некий безымянный печатник создал большую.</p>-->
+<!--                            <a href="/viknosystem-price.pdf" download class="btn-common">Скачать <i><img src="images/icon-download.svg" alt=""></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section class="section services-section">-->
+<!--            <div class="row">-->
 
-                <div class="col-lg-7 gray-bg">
-                    <div class="servicese-heading">
-                        <div class="h3">Услуги и Проблемы</div>
-                        <div class="arrows services-arrows">
-                            <div class="slider-prev"><img src="images/arrow-prev.svg" alt=""></div>
-                            <div class="slider-next"><img src="images/arrow-next.svg" alt=""></div>
-                        </div>
-                    </div>
-                    <div class="services-slider">
-                        <div class="services-slide">
-                            <div class="services-card">
-                                <span class="tag">Проблема</span>
-                                <img src="images/services-img-1.jpg" alt="">
-                                <a href="#" class="btn-common">Услуги и Проблемы</a>
-                            </div>
-                            <div class="services-card">
-                                <span class="tag">Услуга</span>
-                                <img src="images/services-img-2.jpg" alt="">
-                                <a href="#" class="btn-common">Услуги и Проблемы</a>
-                            </div>
-                        </div>
-                        <div class="services-slide">
-                            <div class="services-card">
-                                <span class="tag">Проблема</span>
-                                <img src="images/services-img-1.jpg" alt="">
-                                <a href="#" class="btn-common">Услуги и Проблемы</a>
-                            </div>
-                            <div class="services-card">
-                                <span class="tag">Услуга</span>
-                                <img src="images/services-img-2.jpg" alt="">
-                                <a href="#" class="btn-common">Услуги и Проблемы</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-lg-5">
-                    <div class="services-txt">
-                        <div class="h5">Это текст-"рыба", часто используемый в печати и вэб-дизайне.
-                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице.
-                        </div>
-                        <ul>
-                            <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
-                            <li>Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений
-                            пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время</li>
-                            <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</li>
-                            <li>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--                <div class="col-lg-7 gray-bg">-->
+<!--                    <div class="servicese-heading">-->
+<!--                        <div class="h3">Услуги и Проблемы</div>-->
+<!--                        <div class="arrows services-arrows">-->
+<!--                            <div class="slider-prev"><img src="images/arrow-prev.svg" alt=""></div>-->
+<!--                            <div class="slider-next"><img src="images/arrow-next.svg" alt=""></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="services-slider">-->
+<!--                        <div class="services-slide">-->
+<!--                            <div class="services-card">-->
+<!--                                <span class="tag">Проблема</span>-->
+<!--                                <img src="images/services-img-1.jpg" alt="">-->
+<!--                                <a href="#" class="btn-common">Услуги и Проблемы</a>-->
+<!--                            </div>-->
+<!--                            <div class="services-card">-->
+<!--                                <span class="tag">Услуга</span>-->
+<!--                                <img src="images/services-img-2.jpg" alt="">-->
+<!--                                <a href="#" class="btn-common">Услуги и Проблемы</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="services-slide">-->
+<!--                            <div class="services-card">-->
+<!--                                <span class="tag">Проблема</span>-->
+<!--                                <img src="images/services-img-1.jpg" alt="">-->
+<!--                                <a href="#" class="btn-common">Услуги и Проблемы</a>-->
+<!--                            </div>-->
+<!--                            <div class="services-card">-->
+<!--                                <span class="tag">Услуга</span>-->
+<!--                                <img src="images/services-img-2.jpg" alt="">-->
+<!--                                <a href="#" class="btn-common">Услуги и Проблемы</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-xxl-4 col-lg-5">-->
+<!--                    <div class="services-txt">-->
+<!--                        <div class="h5">Это текст-"рыба", часто используемый в печати и вэб-дизайне.-->
+<!--                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице.-->
+<!--                        </div>-->
+<!--                        <ul>-->
+<!--                            <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя-->
+<!--                            <li>Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений-->
+<!--                            пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время</li>-->
+<!--                            <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</li>-->
+<!--                            <li>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
         <section class="section how-we-work">
             <div class="container">
                 <div class="section-title-small">
@@ -754,7 +756,7 @@
                 </div>
                 <div class="table-buttons">
                     <a href="/viknosystem-price.pdf" download class="btn-common">Скачать <i><img src="images/icon-download.svg" alt=""></i></a>
-                    <a href="#" class="btn-common btn-expand-table">Развернуть список</a>
+<!--                    <a href="#" class="btn-common btn-expand-table">Развернуть список</a>-->
                 </div>
             </div>
         </section>
@@ -826,7 +828,7 @@
                                         <label class="input-wrapper">
                                             <!--                            <span class="main-label">Имя *</span>-->
                                             <span class="placeholder">Имя *</span>
-                                            <input name="bottom-name"
+                                            <input name="name"
                                                    id="bottom-name"
                                                    type="text"
                                                    class="custom-input required"
@@ -837,7 +839,7 @@
                                         <label class="input-wrapper">
                                             <!--                            <span class="main-label">Номер телефона *</span>-->
                                             <span class="placeholder">Номер телефона *</span>
-                                            <input name="bottom-phone"
+                                            <input name="phone"
                                                    id="bottom-phone"
                                                    type="text"
                                                    class="custom-input required"
@@ -848,22 +850,22 @@
                                         <label class="input-wrapper">
                                             <!--                            <span class="main-label">Проблема *</span>-->
                                             <span class="placeholder">Сообщение *</span>
-                                            <input name="bottom-service"
+                                            <input name="service"
                                                    id="bottom-service"
                                                    type="text"
                                                    class="custom-input required"
                                                    placeholder="">
                                         </label>
                                     </div>
-                                    <a href="#main-form" class="btn-common hover-light anchor-link hover-border-blue">Отправить</a>
+                                    <a href="#" class="form-submit btn-common hover-light hover-border-blue">Отправить</a>
                                 </form>
                             </div>
-                            <div class="form-descr col-lg-4">
-                                <ul>
-                                    <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</li>
-                                    <li>В то время некий безымянный печатник создал большую</li>
-                                </ul>
-                            </div>
+<!--                            <div class="form-descr col-lg-4">-->
+<!--                                <ul>-->
+<!--                                    <li>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</li>-->
+<!--                                    <li>В то время некий безымянный печатник создал большую</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                         </div>
                     </div>
                     <div class="col-lg-12 col-xl-3">
