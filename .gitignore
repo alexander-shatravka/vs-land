@@ -34,7 +34,6 @@ sitemap.xml
 sitemap.xml.gz
 
 cache/
-assets/
 
 /readme.html
 /license.txt
