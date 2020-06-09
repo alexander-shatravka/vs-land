@@ -976,7 +976,6 @@
   .tab {
     display: none;
     max-width: 100%;
-    overflow-x: scroll;
 
     &.show {
       display: block;
@@ -1214,6 +1213,10 @@
   .form-bottom-badges {
     border: 2px solid rgba($gray, 0.6);
     padding: 30px 50px;
+
+    @include breakpoint(lg) {
+      margin-top: 30px;
+    }
 
     .badge-block {
       padding-bottom: 40px;

@@ -6,17 +6,28 @@ footer {
   .row {
     justify-content: center;
 
+    .col-lg-12 {
+      width: 50%;
+    }
+
     @include breakpoint(lg) {
       justify-content: space-between;
       padding: 0 15px;
       .footer-col {
-        width: 33.33%;
+        width: 25%;
+      }
+      .col-lg-12 {
+        width: 50%;
       }
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       .footer-col {
         width: 50%;
+      }
+
+      .col-lg-12 {
+        width: 100%;
       }
     }
   }
@@ -54,6 +65,23 @@ footer {
 
         @include breakpoint(sm) {
           margin-bottom: 20px;
+        }
+      }
+    }
+    .contact-details-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 50%;
+
+        @include breakpoint (sm) {
+          flex-basis: 100%;
+        }
+
+        i {
+          display: inline-block;
+          margin-right: 10px;
         }
       }
     }
