@@ -32,6 +32,10 @@
       &.hide {
         display: none;
       }
+
+      @include breakpoint (md) {
+        padding-left: 7px;
+      }
     }
 
     input {

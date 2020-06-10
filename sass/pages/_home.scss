@@ -304,6 +304,9 @@
   }
 
   @include breakpoint(md) {
+    .about-img {
+      max-height: 300px;
+    }
     .about-card {
       padding: 20px;
 
@@ -1019,11 +1022,6 @@
       background: $blue;
       color: $white;
     }
-
-    @include breakpoint(md) {
-      padding: 5px;
-      font-size: 12px;
-    }
   }
 }
 
@@ -1034,6 +1032,10 @@
   }
   @include breakpoint(md) {
     padding-left: 0px;
+
+    .partners-slider {
+      margin-top: 20px;
+    }
   }
   @include breakpoint(sm) {
     padding: 0 10px;
@@ -1043,6 +1045,14 @@
     display: inline-block;
     &:after {
       display: none;
+    }
+
+    @include breakpoint(md) {
+      width: 100%;
+
+      .partners-slider-navigation {
+        width: 100%;
+      }
     }
   }
 
@@ -1104,15 +1114,19 @@
       display: flex;
       align-items: center;
     }
+
+    @include breakpoint(md){
+      padding: 0;
+
+      .partner-img {
+        justify-content: center;
+      }
+    }
     p {
       margin-top: 50px;
       font-weight: 600;
       color: $gray;
       font-size: 18px;
-    }
-
-    @include breakpoint(md){
-      padding: 0 20px;
     }
   }
 }

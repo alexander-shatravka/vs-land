@@ -82,8 +82,8 @@ function initFormCustomFocus() {
 function initAnchorsScroll() {
   $(document).on('click', 'a.anchor-link[href^="#"]', function (event) {
     event.preventDefault();
-
-    $('.main-nav').removeClass('mobile-show');
+    
+    $('.burger-btn').trigger('click');
 
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
