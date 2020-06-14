@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  initIntroSlider();
+  // initIntroSlider();
   initFormCustomFocus();
   initAnchorsScroll();
   initServicesSlider();
