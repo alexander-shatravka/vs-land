@@ -83,7 +83,8 @@ function initAnchorsScroll() {
   $(document).on('click', 'a.anchor-link[href^="#"]', function (event) {
     event.preventDefault();
     
-    $('.burger-btn').trigger('click');
+    $('.burger-btn').removeClass('active');
+    $('.main-nav').removeClass('mobile-show');
 
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
