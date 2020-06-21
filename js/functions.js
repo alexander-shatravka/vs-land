@@ -156,7 +156,7 @@ function initTelegramForms() {
       data: form_data,
       success: function() {
         // jQuery('.thank-massage').addClass('done');
-        // location = '/thank-you.html';
+        location = '/thank-you.html';
         // setTimeout(function() { jQuery('.thank-massage').removeClass('done'); }, 3000);
       },
     });
