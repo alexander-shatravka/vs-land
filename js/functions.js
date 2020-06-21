@@ -85,7 +85,7 @@ function initAnchorsScroll() {
     
     $('.burger-btn').removeClass('active');
     $('.main-nav').removeClass('mobile-show');
-    $('.main-nav').removeClass('mobile-menu-enable');
+    $('.header').removeClass('mobile-menu-enable');
 
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
